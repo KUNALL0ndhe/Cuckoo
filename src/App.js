@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Flex } from "@chakra-ui/react";
+import Header from "./Components/Header";
+import ViewScreen from './screens/ViewScreen'
+import CardScreen from "./screens/CardScreen";
+import Slider from "./Components/Slider";
+import OfferScreen from "./screens/OfferScreen";
+import TextScreen from "./screens/TextScreen";
+import LastScreen from "./screens/LastScreen";
+import Footer from "./Components/Footer";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <>
+  <Header />
+
+  <Flex
+    as='main'
+    mt='59px'
+    direction='column'
+    py='6'
+    px='6'></Flex>
+
+    <ViewScreen/>
+    <CardScreen/>
+    <Slider/>
+    <OfferScreen/>
+    <TextScreen/>
+    <LastScreen/>
+    <Footer />
+
+  </>
+  )
 }
 
 export default App;
